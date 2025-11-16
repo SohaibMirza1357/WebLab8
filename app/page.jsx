@@ -16,7 +16,7 @@ export default async function Home() {
             : 'Please sign in to access protected content.'}
         </p>
         
-        {session ? (
+        {session && (
           <div className="space-x-4">
             <Link
               href="/main"
@@ -25,13 +25,6 @@ export default async function Home() {
               Go to Main Page
             </Link>
           </div>
-        ) : (
-          <Link
-            href="/signin"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium transition-colors"
-          >
-            Sign In
-          </Link>
         )}
       </div>
     </div>

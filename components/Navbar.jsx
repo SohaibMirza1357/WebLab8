@@ -14,16 +14,6 @@ export default async function Navbar() {
             <Link href="/" className="text-xl font-bold text-gray-800">
               Auth Project
             </Link>
-            {session && (
-              <div className="ml-10 flex items-center space-x-4">
-                <Link 
-                  href="/main" 
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Main Page
-                </Link>
-              </div>
-            )}
           </div>
           
           <div className="flex items-center">
@@ -35,7 +25,7 @@ export default async function Navbar() {
                 Sign In
               </Link>
             ) : (
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-5">
                 <span className="text-gray-700 text-sm font-medium">
                   {session.user.name}
                 </span>
@@ -43,8 +33,8 @@ export default async function Navbar() {
                   <Image
                     src={session.user.image}
                     alt={session.user.name || "User"}
-                    width={40}
-                    height={40}
+                    width={45}
+                    height={45}
                     className="rounded-full"
                   />
                 )}
